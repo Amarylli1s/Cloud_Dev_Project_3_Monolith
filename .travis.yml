@@ -29,7 +29,7 @@ script:
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push papicha/udagram-api-feed
-  - docker push papicha/udagram-api-user
-  - docker push papicha/udagram-frontend:local
-  - docker push papicha/reverseproxy
+  - docker push papicha/udagram-api-feed:v1
+  - docker push papicha/udagram-api-user:v1
+  - docker push papicha/udagram-frontend:v1
+  - docker push papicha/reverseproxy:v1
